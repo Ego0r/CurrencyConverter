@@ -1,8 +1,7 @@
 import telebot
 from extensions import APIException, Converter
-from config import TOKEN, moneypool, allcurrency
+from config import TOKEN, moneypool
 import traceback
-
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -12,11 +11,7 @@ def start(message: telebot.types.Message):
     bot.send_message(message.chat.id, f"Приветствую, {message.chat.first_name}, если Вы хотите узнать курсы "
                                       f"валют, то Вам необходимо прописать пару на русском языке с маленькой буквы. "
                                       f"Например, если я хочу узнать сколько стоит 1 доллар, то я напишу 'доллар рубль 1'."
-                                      f"Если Вы хотите узнать какие валюты я могу обрабатывать, то пропишите команду'/help'")
-
-@bot.message_handler(commands=['help'])
-def help(message: telebot.types.Message):
-    bot.send_message(message.chat.id, f"Я могу показать курс следующих валют: {allcurrency}")
+                                      f"Если Вы хотите узнать какие валюты я могу обрабатывать, то пропишите команду'/currency'")
 
 
 @bot.message_handler(commands=['currency'])

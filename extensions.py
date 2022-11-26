@@ -34,9 +34,3 @@ class Converter:
         new_price = round(new_price, 3)
         message = f"Цена {amount} {base} к {sym} : {new_price}"
         return message
-
-
-        # r = requests.get(f'https://api.exchangerate.host/convert?from={base_key}&to={sym_key}')
-        # resp = json.loads(r.content)
-        # new_price = resp['result'] * float(amount)
-

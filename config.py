@@ -5,7 +5,4 @@ moneypool = {
     'юань': 'CNY'
 }
 
-allcurrency = list(moneypool.values())
-
-TOKEN = "токен  в слаке могу прислать"
-
+TOKEN = "5885298082:AAFBaaTDgy79rR9TvuRBYOyIh486LbDZTKI"
